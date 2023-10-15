@@ -6,6 +6,12 @@
     <title>Home</title>
 </head>
 <body>
-    
+    <?= 'Hi' ?>
+    <?php 
+        $une_variable = 5.5;
+        $nom = "Ali";
+        var_dump($une_variable);
+        var_dump($nom);
+    ?>
 </body>
 </html>
