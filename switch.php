@@ -1,6 +1,6 @@
 <?php 
 // switch, jours de la semaine
-	$jour = 6;
+	$jour = '6';
 	switch ($jour) {
 		case 1:
 			echo "Aujourd'hui c'est Lundi";
