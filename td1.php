@@ -344,6 +344,81 @@
         
       </details>
     </div>
+    <div class="exo-container">
+      <h3>Exercice 7:</h3>
+      <p>
+        <ul>
+          <li>1. Écrire un programme permettant d'échanger les valeurs de deux variables A et B, et ce quel
+          que soit leur contenu préalable.</li>
+          <li>2. Même question avec le programme ne devra utiliser que 2 variables.</li>
+        </ul>
+      </p>
+      <details>
+        <summary>La solution</summary>
+        <ul>
+            <li>1. Écrire un programme permettant d'échanger les valeurs de deux variables A et B, et ce quel
+          que soit leur contenu préalable.
+              <p class="box">
+              <pre>
+                  <code class="language-php line-numbers">
+                      &lt;?php
+                      $A = 5;
+                      $B = 1;
+                      echo "Avant échange A= $A, B= $B</br>";
+                      $temp = $A;
+                      $A = $B;
+                      $B = $temp;
+                      echo "Après échange A= $A, B= $B";
+                      ?&gt;
+                  </code>
+              </pre>
+              <div>
+                <h4>Le résultats:</h4>
+                  <?php
+                      $A = 5;
+                      $B = 1;
+                      echo "Avant échange A= $A, B= $B</br>";
+                      $temp = $A;
+                      $A = $B;
+                      $B = $temp;
+                      echo "Après échange A= $A, B= $B";
+                  ?>
+              </div>
+              </p>
+            </li>
+            <li>2. Même question avec le programme ne devra utiliser que 2 variables.
+              <p class="box">
+              <pre>
+                  <code class="language-php line-numbers">
+                      &lt;?php
+                        $A = 5;
+                        $B = 1;
+                        echo "Avant échange A= $A, B= $B</br>";
+                        $A = $A + $B;
+                        $B = $A - $B;
+                        $A = $A - $B;
+                        echo "Après échange A= $A, B= $B";
+                      ?&gt;
+                  </code>
+              </pre>
+              <div>
+                <h4>Le résultats:</h4>
+                  <?php
+                        $A = 5;
+                        $B = 1;
+                        echo "Avant échange A= $A, B= $B</br>";
+                        $A = $A + $B;
+                        $B = $A - $B;
+                        $A = $A - $B;
+                        echo "Après échange A= $A, B= $B";
+                  ?>
+              </div>
+              </p>
+            </li>
+        </ul>
+        
+      </details>
+    </div>
     
     <script src="prism.js"></script>
   </body>
