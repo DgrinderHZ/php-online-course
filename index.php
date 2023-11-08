@@ -11,7 +11,10 @@
       <ul>
         <li>Accueil</li>
         <li>cours</li>
-        <li><a href="./td.html">traveaux dirigés (TD)</a></li>
+        <li><a href="./td1.php">traveaux dirigés (TD1)</a></li>
+        <li><a href="./td2.php">traveaux dirigés (TD2)</a></li>
+        <li><a href="./td3.php">traveaux dirigés (TD3)</a></li>
+        <li><a href="./td4.php">traveaux dirigés (TD4)</a></li>
         <li>RESOURCES</li>
       </ul>
     </div>
