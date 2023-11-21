@@ -44,7 +44,7 @@
 }}
 
 \lfoot{}
-\cfoot{\textbf{$\mathsf{\href{https://www.youtube.com/@zeek\_zone}{ \color{blue} https://www.youtube.com/@zeek\_zone} ~~ 2023-2024}$}}
+\cfoot{\textbf{$\mathsf{\href{https://www.youtube.com/@zeek\_zone}{\color{blue} https://www.youtube.com/@zeek\_zone} ~~ 2023-2024}$}}
 %\rfoot{\textit{Pr. $\mathcal{A}$.Kaal}}
 %=====================Algo setup
 \algblock{If}{EndIf}
@@ -172,7 +172,10 @@ text=gray, rectangle, rounded corners, right,minimum height=.3cm]
 
 \usepackage{listings,xcolor}
 \usepackage{inconsolata}
-
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+anchorcolor = blue]{hyperref}
 \definecolor{dkgreen}{rgb}{0,.6,0}
 \definecolor{dkblue}{rgb}{0,0,.6}
 \definecolor{dkyellow}{cmyk}{0,0,.8,.3}
@@ -201,65 +204,115 @@ text=gray, rectangle, rounded corners, right,minimum height=.3cm]
 \begin{document}
 	
 	\begin{center}
-		\large{\textbf{Série N\textdegree 2: \textsc{LES CONDITIONS (IF, ELSE ET ELSEIF)}}}
+		\large{\textbf{Série N\textdegree 1: \textsc{Les éléments de base}}}
 	\end{center}
 	% ===================================================
 	\begin{definition}
-		\hspace{2ex} Déclarer une variable \textbf{{\color{orange} \$genre}}  qui contient une chaîne de caractères. 
-		
-		Créer une condition qui affiche un message différent en fonction de la valeur de la variable.\\
-		
-		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td2.php}{\color{blue} /exercices/td2.php}
-	\end{definition}
-	% ===================================================
-	\begin{definition}
 		\hspace{2ex} 
 		\begin{enumerate}
-			\item Déclarer une variable \textbf{{\color{orange} \$budget}} qui contient la somme de 1000 DH.  
-			\item Déclarer une variable \textbf{{\color{orange} \$achats}} qui contient la somme de 1050 DH.
+			\item Parmi les variables suivantes, lesquelles ont un nom valide : \textbf{{\color{dkgreen} \$a, \$\_a, \$a\_a, \$AAA, \$a!, \$1a et \$a1 }}?
+			\item Déclarer une variable \textbf{{\color{dkgreen} \$test}} qui contient la valeur 42. En utilisant la fonction \textbf{{\color{violet} var\_dump()}}, faire en sorte que le type de la variable \textbf{{\color{dkgreen} \$test}} soit string et que la valeur soit bien de 42.
 		\end{enumerate}
-		Afficher si le budget permet de payer les achats.\\
+		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td1.php}{\color{blue} /exercices/td1.php}
+	\end{definition}
+	% ===================================================
+	
+	\begin{definition}
+		\hspace{2ex} Donner les valeurs des variables \textbf{{\color{dkgreen} \$a, \$b, \$c, \$d}} à la fin des scripts suivants :
+		\begin{center}
+			\begin{lstlisting}[language=PHP]
+				<?php
+				$a = "Les ";
+				$b = "7 merveilles du monde"
+				$c = $a . $b;
+				$d = $b + 13;
+				$b = $c;
+				echo "a= ", $a, "b= ", $b, "c= ", $c, "d= ", $d;
+				?> 
+			\end{lstlisting}
+		\end{center}
 		
-		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td2.php}{\color{blue} /exercices/td2.php}
+		\begin{center}
+			\begin{lstlisting}[language=PHP]
+				<?php
+				$a = "5+5";
+				$b = "2E2";
+				$c = $a + $b;
+				$d = (double)$b;
+				echo "a= ", $a, "b= ", $b, "c= ", $c, "d= ", $d;
+				?>
+			\end{lstlisting}
+		\end{center}
 	\end{definition}
 	% ===================================================
 	\begin{definition}
-		\hspace{2ex} 
-		Déclarer une variable \textbf{{\color{orange} \$age}} qui contient la valeur de type entier de votre choix. Réaliser une condition pour afficher si la personne est mineure ou majeure.\\
-		
-		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td2.php}{\color{blue} /exercices/td2.php}
+		\hspace{2ex} Quelles seront les valeurs des variables A et B après exécution des instructions suivantes ?
+		\begin{center}
+			\begin{lstlisting}[language=PHP]
+				<?php
+				$A = 1;
+				$B = $A + 3;
+				$A = $a . $b;
+				echo "A = {$A}, B = {$B}";
+				?> 
+			\end{lstlisting}
+		\end{center}
+		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td1.php}{\color{blue} /exercices/td1.php}
 	\end{definition}
 	% ===================================================
 	\begin{definition}
-		\hspace{2ex} Déclarer une variable \textbf{{\color{orange} \$heure}} qui contient la valeur de type entier de votre choix comprise entre 0 et 24. 
-		
-		Créer une condition qui affiche un message si l'heure est le matin, l'après-midi ou la nuit.\\
-		
-		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td2.php}{\color{blue} /exercices/td2.php}
+		\hspace{2ex} Quelles seront les valeurs des variables A, B et C après exécution des instructions suivantes ?
+		\begin{center}
+			\begin{lstlisting}[language=PHP]
+				<?php
+				$A = 3;
+				$B = 10;
+				$C = $A + $B;
+				$B = $A + $B;
+				$A = $C;
+				$A = $C / $B;
+				$A = $C % $A;
+				echo "A= ", $A, ", B= ", $B, ", C= ", $C;
+				?> 
+			\end{lstlisting}
+		\end{center}
+	
 	\end{definition}
-	% ===================================================
-	\begin{definition}
-		\hspace{2ex} 
-		\begin{enumerate}
-			\item Écrivez une expression conditionnelle utilisant une variable {\color{orange} \textbf{\$note}} et affiche un grade à un intervalle de note : grade A pour une note entre [18–20],  B entre [14–18[, C entre [10–14[, et D entre [0–10[.
-			\item Rédigez une expression conditionnelle qui teste si un nombre est à la fois multiple de 3 et de 7.
-			\item Utilisez les variables \textbf{{\color{orange} \$nombre1, \$nombre2}} et {\color{orange}  \textbf{\$operation}} pour réaliser un script effectuant une opération  parmi les quatre opérations arithmétiques  élémentaires suivant la valeur de la variable {\color{orange}  \textbf{\$operation}} (utiliser l'instruction \textbf{switch}).
-			\item Refaire la question 3 avec l'instruction \textbf{match}.
-		\end{enumerate}
-		
-		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td2.php}{\color{blue} /exercices/td2.php}
-	\end{definition}
+	
 	
 	% ===================================================
 	\begin{definition}
 		\hspace{2ex} 
 		\begin{enumerate}
-			\item  Écrivez un script PHP pour vérifier si un caractère est une voyelle ou une consonne à l'aide de l'instruction \textbf{switch}
-			\item Écrivez un script PHP pour vérifier si le nombre est pair ou impair à l'aide de l'instruction \textbf{match}
+			\item Écrire un script PHP permettant de calculer le périmètre d’un cercle.
+			\item Écrire un script PHP qui calcule et affiche le carré d'un nombre.
+			\item Écrire un script PHP qui calcule l’image d’un nombre x par une fonction du type
+			$f(x) = ax^2+ bx + c$ (a, b et c des variables à donner)
 		\end{enumerate}
-		
+		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td1.php}{\color{blue} /exercices/td1.php}
 	\end{definition}
 	
+	
+	
+	% ===================================================
+	\begin{definition}
+		\hspace{2ex} 
+		\begin{enumerate}
+			\item Écrire un script PHP avec 4 variables entières qui calcule et affiche leur moyenne et leur somme.
+			\item Écrire un script PHP avec 5 entiers et qui affiche leur somme et leur moyenne. Le programme ne devra utiliser que 2 variables.
+			\item Écrire un script PHP permettant de calculer la moyenne d’un élève sur 5 matières.
+		\end{enumerate}
+		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td1.php}{\color{blue} /exercices/td1.php}
+	\end{definition}
+	% ===================================================
+	\begin{definition}
+		\hspace{2ex} 
+		\begin{enumerate}
+			\item Écrire un programme permettant d’échanger les valeurs de deux variables A et B, et ce quel que soit leur contenu préalable.
+			\item Même question avec le programme ne devra utiliser que 2 variables.
+		\end{enumerate}
+		Solution : \href{https://exercicesdephp.000webhostapp.com/exercices/td1.php}{\color{blue} /exercices/td1.php}
+	\end{definition}
 	
 	
 \end{document}
